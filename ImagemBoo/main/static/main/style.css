@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    font-family: 'Futura', sans-serif;
+}
+.menu {
+    background-color: #1E90FF;
+    overflow: hidden;
+}
+.menu a {
+    float: left;
+    display: block;
+    color: #F0F8FF;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.menu a.right {
+    float: right;
+}
+.menu a:hover {
+    background-color: #555;
+    color: white;
+}
