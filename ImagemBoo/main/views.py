@@ -1,5 +1,12 @@
 from django.shortcuts import render
+from main.models import *
 
-# Create your views here.
 def home(request):
-    return render(request, 'main/base.html')
+    images = Image.objects.all()
+
+    context = {
+        'title': 'All pictures',
+        'images': images,
+        'header': "All pictures"
+        }
+    return render(request, 'main/base.html', context)

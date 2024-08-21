@@ -8,16 +8,14 @@
   </head>
 
   <body>
-    {% include "main/menu.html" %}
+    <div class="menu">{% include "main/menu.html" %}</div>
+    <div class="sidemenu">{% include "main/sidemenu.html" %}</div>
     <div>
-      {% block content %} {% endblock %}
+        {% block content %} 
+      {% comment %} main content goes here {% endcomment %}
+        {% endblock %}
     </div>
-      {% block footer %}
-      <footer>
-        <div>
-          <h2>{{footer}}</h2>
-        </div>
-      </footer>
-      {% endblock %}
+    <div class="footer"> {% include "main/footer.html" %}</div>
+    
   </body>
 </html>

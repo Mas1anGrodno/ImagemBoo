@@ -1,7 +1,10 @@
+/* ------------------------ Body ------------------------ */
 body {
     margin: 0;
     font-family: 'Futura', sans-serif;
 }
+
+/*  ---------------------- Top menu---------------------  */
 .menu {
     background-color: #1E90FF;
     overflow: hidden;
@@ -20,4 +23,70 @@ body {
 .menu a:hover {
     background-color: #555;
     color: white;
+}
+
+
+/* --------------------- Side menu ------------------------ */
+.sidemenu {
+    height: 100%;
+    width: 166px;
+    position: fixed;
+    top: 46px;
+    left: 0;
+    background-color: #37588a;
+    padding-top: 0px;
+}
+.sidemenu a {
+    /* padding: 10px 15px; */
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-decoration: none;
+    font-size: 13px;
+    color: #F0F8FF;
+    text-align: center;
+    display: block;
+}
+.sidemenu a:hover {
+    background-color: #555;
+    color: white;
+}
+
+
+/* --------------------- Footer ------------------------ */
+.footer {
+    background-color: #333;
+    font-family: 'Futura', sans-serif;
+    color: #fff;
+    font-size: 13px;
+    padding: 5px;
+    text-align: left;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .footer .container {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .footer h2 {
+    margin-top: 0;
+    font-size: 0.6em;
+  }
+
+  .footer a:hover:not(.active) {
+    background-color: #5d95e3;
+  }
+  
+  .footer a:link {
+    color: #F0F8FF; /* Цвет для обычных ссылок */
+  }
+
+  .footer a:visited {
+    color: #F0F8FF; /* Цвет для посещенных ссылок */
+  }
+
+  .footer a[href^="mailto"]:visited {
+    color: #F0F8FF;       
 }
