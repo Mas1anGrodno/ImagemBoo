@@ -4,6 +4,8 @@ body {
     font-family: 'Futura', sans-serif;
 }
 
+
+
 /*  ---------------------- Top menu---------------------  */
 .menu {
     background-color: #1E90FF;
@@ -16,6 +18,7 @@ body {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+ 
 }
 .menu a.right {
     float: right;
@@ -36,8 +39,17 @@ body {
     background-color: #37588a;
     padding-top: 0px;
 }
+.sidemenu ul {
+  list-style-type: none; /* Убираем маркеры списка */
+  padding: 0;
+  margin: 0;
+}
+
+.sidemenu li {
+  width: 100%; /* Устанавливаем ширину элемента списка */
+}
+
 .sidemenu a {
-    /* padding: 10px 15px; */
     padding-top: 5px;
     padding-bottom: 5px;
     text-decoration: none;
@@ -45,12 +57,13 @@ body {
     color: #F0F8FF;
     text-align: center;
     display: block;
+    width: 100%; /* Устанавливаем ширину ссылки */
+    box-sizing: border-box; /* Учитываем отступы в ширину */
 }
 .sidemenu a:hover {
     background-color: #555;
     color: white;
 }
-
 
 /* --------------------- Footer ------------------------ */
 .footer {
