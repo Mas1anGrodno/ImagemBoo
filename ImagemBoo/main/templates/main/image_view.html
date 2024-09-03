@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %}
+
+{% block title %}"1111"{% endblock %}
+
+{% block content %}
+<div class="image-grid">
+    {% for image in object_list %}
+    <div class="image-container">
+        <img src="{{ image.file.url }}" alt="{{ image.description }}">
+        <h1 class="image-description">{{ image.description }} - upld by:{{ image.user }}</h1>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

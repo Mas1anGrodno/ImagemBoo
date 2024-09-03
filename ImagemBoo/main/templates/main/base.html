@@ -9,8 +9,9 @@
 
   <body>
     {% include "main/menu.html" %} {% include "main/sidemenu.html" %}
-    <div>
-      {% block content %} {% comment %} main content goes here {% endcomment %}
+    <div class="content">
+      {% block content %} 
+      
       {% endblock %}
     </div>
     <div class="footer">{% include "main/footer.html" %}</div>
