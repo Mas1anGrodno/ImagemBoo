@@ -9,7 +9,7 @@ class Category(models.Model):
     class Meta:
         verbose_name = "Image Category"
         verbose_name_plural = "Image Category"
-        ordering = ["created_at"] # Sort by create date
+        ordering = ["name"] # Sort by name
     
     def __str__(self):
       return self.name

@@ -1,7 +1,7 @@
 <div class="sidemenu">
   <ul>
     {% for category in side_menu_categories %}
-    <li><a href="#">{{ category.name }}</a></li>
+    <li><a href="{% url 'images_by_category' category.name %}">{{ category.name }}</a></li>
     {% endfor %}
   </ul>
 </div>
