@@ -2,11 +2,11 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path
-from .views import ImagesList, ImagesListAll
+from .views import ImagesListByCategory, ImagesListAll
 
 urlpatterns = [
     path("", ImagesListAll.as_view(),name='home'),
-    path("<str:category_name>/", ImagesList.as_view(), name='images_by_category'),
+    path("<str:category_name>/", ImagesListByCategory.as_view(), name='images_by_category'),
     
 ]
 
