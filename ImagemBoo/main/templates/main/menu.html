@@ -1,4 +1,10 @@
 <div class="menu">
   <a href="/">Все Категории</a>
-  <a href="#login" class="right">Войти</a>
+{% if user.is_authenticated %}
+  <a href="/users/logout" class="right">Выйти</a>
+  <a href="#" class="right">Вы вошли как: {{ user.username }}</a>
+{% else %}
+  <a href="/users/login" class="right">Войти</a>
+  <a href="#" class="right">Зарегистрироваться</a>
+{% endif %}
 </div>
