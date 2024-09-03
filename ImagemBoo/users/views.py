@@ -20,5 +20,5 @@ def logout_user(request):
 class RegisterUser(CreateView):
     form_class = RegisterUserForm
     template_name = 'users/register.html'
-    extra_context = {'title': "Регистрация"}
+    extra_context = {'title': "Registration"}
     success_url = reverse_lazy('users:login')
