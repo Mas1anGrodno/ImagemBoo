@@ -32,7 +32,7 @@ class AddPicture(CreateView):
 
 class UserPictures(LoginRequiredMixin, ListView):
     model = Image
-    template_name = 'main/image_view.html'
+    template_name = 'main/image_user.html'
 
     def get_queryset(self):
         return Image.objects.filter(user=self.request.user)

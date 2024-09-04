@@ -4,7 +4,7 @@
     {% for image in object_list %}
     <div class="image-container">
         <img src="{{ image.file.url }}" alt="{{ image.description }}">
-        <h1 class="image-description">{{ image.description }} - upld by:{{ image.user }}</h1>
+        <h1 class="image-description">{{ image.description }} - uploaded by:{{ image.user }}</h1>
     </div>
     {% endfor %}
 </div>
