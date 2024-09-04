@@ -4,6 +4,9 @@ body {
     font-family: 'Futura', sans-serif;
 }
 
+p {
+  align-self: flex-end;
+}
 /* --------------------- Content field style ------------------------ */
 .content {
   margin-left: 139px; /* Отступ слева, равный ширине бокового меню */
@@ -67,7 +70,7 @@ body {
 /* --------------------- Side menu ------------------------ */
 .sidemenu {
     height: 100%;
-    width: 139px;
+    width: 128px;
     position: fixed;
     top: 46px;
     left: 0;
@@ -140,3 +143,53 @@ body {
 }
 
 
+/*  ---------------------- Login and Register form---------------------  */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh; /* Высота экрана */
+  margin-top: 50px; /* Отступ сверху для верхнего меню */
+}
+.login-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: Right;
+  background-color: #f4f4f4;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 300px;
+  padding: 10px;
+  margin: 0px 0;
+  font-size: 16px;
+  margin-left: 15px;
+}
+.login-form button {
+  background-color: #1E90FF;
+  color: #F0F8FF;
+  padding: 14px 16px;
+  font-size: 18px;
+  border: none;
+  /* border-radius: 5px; */
+  cursor: pointer;
+}
+.login-form button:hover {
+  background-color: #555;
+  color: white;
+}
+
+/*  ---------------------- Register form---------------------  */
+
+.form-container input[type="text"],
+.form-container input[type="password"],
+.form-container input[type="email"] {
+  width: 300px;
+  padding: 10px;
+  margin: 0px 0;
+  font-size: 12px;
+  margin-left: 15px;
+}
