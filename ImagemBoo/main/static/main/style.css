@@ -193,3 +193,23 @@ p {
   font-size: 12px;
   margin-left: 15px;
 }
+
+/*  ---------------------- Buttons ---------------------  */
+
+.button {
+  background-color: #1E90FF;
+  color: #F0F8FF;
+  padding: 3px 15px;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none; /* Убирает подчеркивание у ссылок */
+  display: inline-block; /* Делает ссылку блочным элементом */
+  width: 65px; /* Фиксированная ширина кнопок */
+  text-align: center; /* Центрирование текста */
+}
+
+.button:hover {
+  background-color: #555;
+  color: white;
+}
