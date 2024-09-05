@@ -6,7 +6,7 @@
     <h1 class="image-description">{{ image.description }}</h1>
     <div>
       <a href="{% url 'image_edit' image.pk %}" class="button-blue">Edit</a>
-      <a href="{% url 'image_delete' image.pk %}" class="button-red">Delete</a>
+      <a href="{% url 'image_restore' image.pk %}" class="button-green">Restore</a>
     </div>
   </div>
   {% endfor %}
