@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %}
+{% block title %}Удаление фильма{% endblock %}
+{% block content %}
+
+<div class="center-content">
+    <h1 class="h3">Confirm action with image: "{{ image.description }}"?</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button class="button-green" type="submit" style="font-size: 24px; width: 200px; height: 80px; margin-right: 20px;">Confirm</button>
+        <button class="button-blue" type="button" style="font-size: 24px; width: 200px; height: 80px; margin-left: 20px;" onclick="window.location.href='{% url 'images_user' %}'">Cancel</button>
+        
+    </form>
+</div>
+{% endblock %}

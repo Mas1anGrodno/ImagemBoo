@@ -176,6 +176,8 @@ p {
   border: none;
   /* border-radius: 5px; */
   cursor: pointer;
+  text-decoration: none; /* Убирает подчеркивание */
+  user-select: none; /* Запрещает выделение текста */
 }
 .login-form button:hover {
   background-color: #555;
@@ -194,9 +196,9 @@ p {
   margin-left: 15px;
 }
 
-/*  ---------------------- Buttons ---------------------  */
+/*  ---------------------- Buttons blue ---------------------  */
 
-.button {
+.button-blue {
   background-color: #1E90FF;
   color: #F0F8FF;
   padding: 3px 15px;
@@ -209,7 +211,57 @@ p {
   text-align: center; /* Центрирование текста */
 }
 
-.button:hover {
+.button-blue:hover {
   background-color: #555;
   color: white;
+}
+
+/*  ---------------------- Buttons red---------------------  */
+
+.button-red {
+  background-color: #ff1e1e;
+  color: #F0F8FF;
+  padding: 3px 15px;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none; /* Убирает подчеркивание у ссылок */
+  display: inline-block; /* Делает ссылку блочным элементом */
+  width: 65px; /* Фиксированная ширина кнопок */
+  text-align: center; /* Центрирование текста */
+}
+
+.button-red:hover {
+  background-color: #555;
+  color: white;
+}
+
+/*  ---------------------- Buttons green---------------------  */
+
+.button-green {
+  background-color: #29bd69;
+  color: #F0F8FF;
+  padding: 3px 15px;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none; /* Убирает подчеркивание у ссылок */
+  display: inline-block; /* Делает ссылку блочным элементом */
+  width: 65px; /* Фиксированная ширина кнопок */
+  text-align: center; /* Центрирование текста */
+}
+
+.button-green:hover {
+  background-color: #555;
+  color: white;
+}
+
+/*  ---------------------- Div center---------------------  */
+.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Высота экрана */
+  text-align: center; /* Центрирование текста */
 }
