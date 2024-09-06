@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %} {% block content %}
+<div class="login-form">
+  <h2>Change user</h2>
+  <form method="post">
+    {% csrf_token %} 
+    {{ form.as_p }}
+    <button type="submit">Save changes</button>
+    <button type="button" onclick="window.location.href='{% url 'images_user' %}'">Cancel</button>
+  </form>
+  <div class="delete-account">
+    <a href="{% url 'delete_user' user.username %}" class="button-red">Delete Account</a>
+  </div>
+</div>
+{% endblock %}

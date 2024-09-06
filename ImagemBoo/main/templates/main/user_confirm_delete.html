@@ -1,0 +1,11 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<div class="center-content">
+  <h1>Are you sure you want to delete your account " {{ object.username }} "?</h1>
+  <form method="post">
+    {% csrf_token %}
+    <button class="button-red" type="submit" style="font-size: 24px; width: 200px; height: 80px; margin-right: 20px;">Yes, delete</button>
+    <button class="button-blue" type="button" style="font-size: 24px; width: 200px; height: 80px; margin-left: 20px;" onclick="window.location.href='{% url 'inspect_user' object.username %}'">Cancel</button>
+  </form>
+{% endblock %}

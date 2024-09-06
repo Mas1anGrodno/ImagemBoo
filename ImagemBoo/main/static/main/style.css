@@ -145,6 +145,7 @@ p {
 
 /*  ---------------------- Login and Register form---------------------  */
 .login-form {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -182,6 +183,11 @@ p {
 .login-form button:hover {
   background-color: #555;
   color: white;
+}
+
+.delete-account {
+  align-self: flex-end;
+  margin-top: auto;
 }
 
 /*  ---------------------- Register form---------------------  */
@@ -265,3 +271,4 @@ p {
   height: 100vh; /* Высота экрана */
   text-align: center; /* Центрирование текста */
 }
+
