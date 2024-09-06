@@ -1,8 +1,9 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse, reverse_lazy
-from django.views.generic import ListView, CreateView, UpdateView
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from main.models import *
+from .forms import *
 
 class ImagesListAll(ListView):
     model = Image
@@ -75,3 +76,28 @@ class DeletedPictures(LoginRequiredMixin, ListView):
 
     def get_queryset(self):
         return Image.objects.filter(user=self.request.user, delete=True)
+
+class UserInspect(UpdateView):
+    model = User
+    form_class = UserInspectForm
+    template_name = 'main/user_inspect.html'
+    success_url = reverse_lazy('images_user')
+
+    def get_object(self, queryset=None):
+        return User.objects.get(username=self.kwargs['user_name'])
+
+    def form_valid(self, form):
+        user = form.save(commit=False)
+        password = form.cleaned_data.get('password')
+        if password:
+            user.set_password(password)
+        user.save()
+        return super().form_valid(form)
+    
+class UserDelete(DeleteView):
+    model = User
+    template_name = 'main/user_confirm_delete.html'
+    success_url = reverse_lazy('home')
+
+    def get_object(self, queryset=None):
+        return User.objects.get(username=self.kwargs['user_name'])

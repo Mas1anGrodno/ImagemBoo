@@ -11,7 +11,7 @@
   <a href="/main/image_user/">My pictures</a>
   <a href="/main/image_deleted/">Deleted</a>
   <a href="/users/logout" class="right">Exit</a>
-  <a href="#userpanel" class="right">Login as: {{ user.username }}</a>
+  <a href="{% url 'inspect_user' user.username %}" class="right">Login as: {{ user.username }}</a>
   
 
 {% else %}
