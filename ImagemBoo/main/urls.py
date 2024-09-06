@@ -12,6 +12,7 @@ urlpatterns = [
     
     path('main/user/<str:user_name>/', UserInspect.as_view(), name='inspect_user'),
     path('main/user/<str:user_name>/delete/', UserDelete.as_view(), name='delete_user'),
+    path('user/<str:username>/images/', SelectedUserImages.as_view(), name='selected_user_images'),
     
     path('main/image_deleted/', DeletedPictures.as_view(), name='images_deleted'),
     path('main/image_edit/<int:pk>/', EditPicture.as_view(), name='image_edit'),

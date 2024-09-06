@@ -261,6 +261,25 @@ p {
   background-color: #555;
   color: white;
 }
+/*  ---------------------- Rating ---------------------  */
+
+.rating {
+  background-color: #cdb900;
+  color: #F0F8FF;
+  padding: 3px 15px;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none; /* Убирает подчеркивание у ссылок */
+  display: inline-block; /* Делает ссылку блочным элементом */
+  width: 65px; /* Фиксированная ширина кнопок */
+  text-align: center; /* Центрирование текста */
+}
+
+.button-blue:hover {
+  background-color: #555;
+  color: white;
+}
 
 /*  ---------------------- Div center---------------------  */
 .center-content {
