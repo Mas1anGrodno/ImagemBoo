@@ -5,6 +5,11 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from main.models import *
 from .forms import *
 
+#------------------------------- API ------------------------------------
+from rest_framework import viewsets
+from rest_framework.permissions import IsAuthenticated
+from .serializers import ImageSerializer
+
 class ImagesListAll(ListView):
     model = Image
     template_name = 'main/image_view.html'
@@ -108,3 +113,16 @@ class UserDelete(DeleteView):
 
     def get_object(self, queryset=None):
         return User.objects.get(username=self.kwargs['user_name'])
+    
+
+#------------------------------- API ------------------------------------
+
+
+class ImageViewSet(viewsets.ModelViewSet):
+    queryset = Image.objects.all()
+    serializer_class = ImageSerializer
+    permission_classes = [IsAuthenticated]
+
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
+
