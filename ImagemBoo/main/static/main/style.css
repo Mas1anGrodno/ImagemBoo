@@ -165,7 +165,9 @@ p {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .login-form input[type="text"],
-.login-form input[type="password"] {
+.login-form input[type="password"],
+.login-form input[type="email"]
+ {
   width: 300px;
   padding: 10px;
   margin: 0px 0;
@@ -191,18 +193,6 @@ p {
 .delete-account {
   align-self: flex-end;
   margin-top: auto;
-}
-
-/*  ---------------------- Register form---------------------  */
-
-.form-container input[type="text"],
-.form-container input[type="password"],
-.form-container input[type="email"] {
-  width: 300px;
-  padding: 10px;
-  margin: 0px 0;
-  font-size: 12px;
-  margin-left: 15px;
 }
 
 /*  ---------------------- Buttons blue ---------------------  */
