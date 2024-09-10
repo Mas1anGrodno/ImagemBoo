@@ -69,6 +69,13 @@ class UserPictures(LoginRequiredMixin, ListView):
 
     def get_queryset(self):
         return Image.objects.filter(user=self.request.user, delete=False)
+class SelectedUserImages(LoginRequiredMixin, ListView):
+    model = Image
+    template_name = 'main/image_selected_user.html'
+
+    def get_queryset(self):
+        user = User.objects.get(username=self.kwargs['username'])
+        return Image.objects.filter(user=user, delete=False)
     
 class DeletedPictures(LoginRequiredMixin, ListView):
     model = Image

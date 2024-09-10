@@ -15,31 +15,33 @@ p {
   box-sizing: border-box;
 }
 /* --------------------- Image grid ------------------------ */
-
 .image-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 10px; /* Установите значение gap для регулировки отступов */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px; /* Установите значение gap для регулировки отступов */
 }
 
 .image-container {
-    padding: 5px; /* Установите значение padding для регулировки отступов */
-    box-sizing: border-box;
+  padding: 5px; /* Установите значение padding для регулировки отступов */
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .image-grid img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+  width: 100%;
+  height: 200px;
+  object-fit: contain; /* Сохраняет пропорции изображения */
+  background-color: #ffffff; /* Цвет фона для пустых областей */
 }
 
 .image-description {
-    text-align: center;
-    font-family: 'Futura', sans-serif;
-    font-size: 12px; /* Установите нужный размер шрифта */
-    color: black;
-    margin-top: 5px; /* Отступ сверху для разделения от изображения */
+  text-align: center;
+  font-family: 'Futura', sans-serif;
+  font-size: 12px; /* Установите нужный размер шрифта */
+  color: black;
+  margin-top: -20px; /* Отступ сверху для разделения от изображения */
 }
+
 
 /*  ---------------------- Top menu---------------------  */
 .menu {
@@ -49,6 +51,7 @@ p {
   top: 0; /* Располагаем меню вверху страницы */
   width: 100%; /* Меню занимает всю ширину страницы */
   z-index: 1000; /* Устанавливаем высокий z-index, чтобы меню было поверх других элементов */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 .menu a {
   float: left;
@@ -162,7 +165,9 @@ p {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .login-form input[type="text"],
-.login-form input[type="password"] {
+.login-form input[type="password"],
+.login-form input[type="email"]
+ {
   width: 300px;
   padding: 10px;
   margin: 0px 0;
@@ -188,18 +193,6 @@ p {
 .delete-account {
   align-self: flex-end;
   margin-top: auto;
-}
-
-/*  ---------------------- Register form---------------------  */
-
-.form-container input[type="text"],
-.form-container input[type="password"],
-.form-container input[type="email"] {
-  width: 300px;
-  padding: 10px;
-  margin: 0px 0;
-  font-size: 12px;
-  margin-left: 15px;
 }
 
 /*  ---------------------- Buttons blue ---------------------  */
@@ -258,6 +251,25 @@ p {
 }
 
 .button-green:hover {
+  background-color: #555;
+  color: white;
+}
+/*  ---------------------- Rating ---------------------  */
+
+.rating {
+  background-color: #cdb900;
+  color: #F0F8FF;
+  padding: 3px 15px;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none; /* Убирает подчеркивание у ссылок */
+  display: inline-block; /* Делает ссылку блочным элементом */
+  width: 65px; /* Фиксированная ширина кнопок */
+  text-align: center; /* Центрирование текста */
+}
+
+.button-blue:hover {
   background-color: #555;
   color: white;
 }
