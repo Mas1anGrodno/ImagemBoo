@@ -3,6 +3,11 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path
 from .views import *
+#------------------------------- API ------------------------------------
+from rest_framework.routers import DefaultRouter
+
+router = DefaultRouter()
+router.register(r'images', ImageViewSet)
 
 urlpatterns = [
     path("", ImagesListAll.as_view(),name='home'),
@@ -18,6 +23,10 @@ urlpatterns = [
     path('main/image_edit/<int:pk>/', EditPicture.as_view(), name='image_edit'),
     path('main/delete/<int:pk>/', DeletePicture.as_view(), name='image_delete'),
     path('main/restore/<int:pk>/', RestorePicture.as_view(), name='image_restore'),
+    
+#------------------------------- API ------------------------------------
+    path('api/v1/', include(router.urls)),
+    
     
 ]
 
