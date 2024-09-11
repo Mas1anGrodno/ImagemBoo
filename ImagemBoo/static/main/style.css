@@ -1,0 +1,286 @@
+/* ------------------------ Body ------------------------ */
+body {
+    margin: 0;
+    font-family: 'Futura', sans-serif;
+}
+
+p {
+  align-self: flex-end;
+}
+/* --------------------- Content field style ------------------------ */
+.content {
+  margin-left: 139px; /* Отступ слева, равный ширине бокового меню */
+  margin-top: 50px; /* Отступ сверху для верхнего меню */
+  padding: 10px;
+  box-sizing: border-box;
+}
+/* --------------------- Image grid ------------------------ */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px; /* Установите значение gap для регулировки отступов */
+}
+
+.image-container {
+  padding: 5px; /* Установите значение padding для регулировки отступов */
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.image-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain; /* Сохраняет пропорции изображения */
+  background-color: #ffffff; /* Цвет фона для пустых областей */
+}
+
+.image-description {
+  text-align: center;
+  font-family: 'Futura', sans-serif;
+  font-size: 12px; /* Установите нужный размер шрифта */
+  color: black;
+  margin-top: -20px; /* Отступ сверху для разделения от изображения */
+}
+
+
+/*  ---------------------- Top menu---------------------  */
+.menu {
+  background-color: #1E90FF;
+  overflow: hidden;
+  position: fixed; /* Фиксируем меню */
+  top: 0; /* Располагаем меню вверху страницы */
+  width: 100%; /* Меню занимает всю ширину страницы */
+  z-index: 1000; /* Устанавливаем высокий z-index, чтобы меню было поверх других элементов */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+.menu a {
+  float: left;
+  display: block;
+  color: #F0F8FF;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.menu a.right {
+  float: right;
+}
+.menu a:hover {
+  background-color: #555;
+  color: white;
+}
+
+
+/* --------------------- Side menu ------------------------ */
+.sidemenu {
+    height: 100%;
+    width: 128px;
+    position: fixed;
+    top: 46px;
+    left: 0;
+    background-color: #37588a;
+    padding-top: 0px;
+}
+.sidemenu ul {
+  list-style-type: none; /* Убираем маркеры списка */
+  padding: 0;
+  margin: 0;
+}
+
+.sidemenu li {
+  width: 100%; /* Устанавливаем ширину элемента списка */
+}
+
+.sidemenu a {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-decoration: none;
+    font-size: 13px;
+    color: #F0F8FF;
+    text-align: center;
+    display: block;
+    width: 100%; /* Устанавливаем ширину ссылки */
+    box-sizing: border-box; /* Учитываем отступы в ширину */
+}
+.sidemenu a:hover {
+    background-color: #555;
+    color: white;
+}
+
+/* --------------------- Footer ------------------------ */
+.footer {
+    background-color: #333;
+    font-family: 'Futura', sans-serif;
+    color: #fff;
+    font-size: 13px;
+    padding: 5px;
+    text-align: left;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .footer .container {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .footer h2 {
+    margin-top: 0;
+    font-size: 0.6em;
+  }
+
+  .footer a:hover:not(.active) {
+    background-color: #5d95e3;
+  }
+  
+  .footer a:link {
+    color: #F0F8FF; /* Цвет для обычных ссылок */
+  }
+
+  .footer a:visited {
+    color: #F0F8FF; /* Цвет для посещенных ссылок */
+  }
+
+  .footer a[href^="mailto"]:visited {
+    color: #F0F8FF;       
+}
+
+
+/*  ---------------------- Login and Register form---------------------  */
+.login-form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh; /* Высота экрана */
+  margin-top: 50px; /* Отступ сверху для верхнего меню */
+}
+.login-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: Right;
+  background-color: #f4f4f4;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.login-form input[type="text"],
+.login-form input[type="password"],
+.login-form input[type="email"]
+ {
+  width: 300px;
+  padding: 10px;
+  margin: 0px 0;
+  font-size: 16px;
+  margin-left: 15px;
+}
+.login-form button {
+  background-color: #1E90FF;
+  color: #F0F8FF;
+  padding: 14px 16px;
+  font-size: 18px;
+  border: none;
+  /* border-radius: 5px; */
+  cursor: pointer;
+  text-decoration: none; /* Убирает подчеркивание */
+  user-select: none; /* Запрещает выделение текста */
+}
+.login-form button:hover {
+  background-color: #555;
+  color: white;
+}
+
+.delete-account {
+  align-self: flex-end;
+  margin-top: auto;
+}
+
+/*  ---------------------- Buttons blue ---------------------  */
+
+.button-blue {
+  background-color: #1E90FF;
+  color: #F0F8FF;
+  padding: 3px 15px;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none; /* Убирает подчеркивание у ссылок */
+  display: inline-block; /* Делает ссылку блочным элементом */
+  width: 65px; /* Фиксированная ширина кнопок */
+  text-align: center; /* Центрирование текста */
+}
+
+.button-blue:hover {
+  background-color: #555;
+  color: white;
+}
+
+/*  ---------------------- Buttons red---------------------  */
+
+.button-red {
+  background-color: #ff1e1e;
+  color: #F0F8FF;
+  padding: 3px 15px;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none; /* Убирает подчеркивание у ссылок */
+  display: inline-block; /* Делает ссылку блочным элементом */
+  width: 65px; /* Фиксированная ширина кнопок */
+  text-align: center; /* Центрирование текста */
+}
+
+.button-red:hover {
+  background-color: #555;
+  color: white;
+}
+
+/*  ---------------------- Buttons green---------------------  */
+
+.button-green {
+  background-color: #29bd69;
+  color: #F0F8FF;
+  padding: 3px 15px;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none; /* Убирает подчеркивание у ссылок */
+  display: inline-block; /* Делает ссылку блочным элементом */
+  width: 65px; /* Фиксированная ширина кнопок */
+  text-align: center; /* Центрирование текста */
+}
+
+.button-green:hover {
+  background-color: #555;
+  color: white;
+}
+/*  ---------------------- Rating ---------------------  */
+
+.rating {
+  background-color: #cdb900;
+  color: #F0F8FF;
+  padding: 3px 15px;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none; /* Убирает подчеркивание у ссылок */
+  display: inline-block; /* Делает ссылку блочным элементом */
+  width: 65px; /* Фиксированная ширина кнопок */
+  text-align: center; /* Центрирование текста */
+}
+
+.button-blue:hover {
+  background-color: #555;
+  color: white;
+}
+
+/*  ---------------------- Div center---------------------  */
+.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Высота экрана */
+  text-align: center; /* Центрирование текста */
+}
+
