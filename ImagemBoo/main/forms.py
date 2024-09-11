@@ -31,20 +31,3 @@ class UserInspectForm(forms.ModelForm):
 
         if password and password_confirm and password != password_confirm:
             self.add_error('password_confirm', 'Passwords\'s does not match.')
-
-class UserInspect(UpdateView):
-    model = User
-    form_class = UserInspectForm
-    template_name = 'main/user_inspect.html'
-    success_url = reverse_lazy('images_user')
-
-    def get_object(self, queryset=None):
-        return User.objects.get(username=self.kwargs['user_name'])
-
-    def form_valid(self, form):
-        user = form.save(commit=False)
-        password = form.cleaned_data.get('password')
-        if password:
-            user.set_password(password)
-        user.save()
-        return super().form_valid(form)
