@@ -180,7 +180,7 @@ synchronizing them with the main branch of main to avoid merge conflicts.
 
 ---
 
-### **Additionally**
+#### **Additionally**
 
 **Docker и Nginx**:
 
