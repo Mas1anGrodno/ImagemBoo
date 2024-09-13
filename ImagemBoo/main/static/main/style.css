@@ -288,12 +288,18 @@ p {
 .image-detail {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh; /* Высота контейнера равна высоте экрана */
+  align-items: flex-start; /* Изменено с center на flex-start */
+  height: 80vh; /* Уменьшена высота контейнера */
+  margin-top: 20px; /* Добавлен отступ сверху */
 }
 
 .image-detail img {
   max-width: 70%;
-  max-height: 70%; 
   object-fit: contain;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+p {
+  margin-top: 10px; /* Уменьшен отступ сверху для текста */
+  text-align: center; /* Центрирование текста */
 }
