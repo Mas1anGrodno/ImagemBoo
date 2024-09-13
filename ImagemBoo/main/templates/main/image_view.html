@@ -1,13 +1,17 @@
-{% extends 'main/base.html' %}
-{% block content %}
+{% extends 'main/base.html' %} {% block content %}
 <div class="image-grid">
-    {% for image in object_list %}
-    <div class="image-container">
-        <img src="{{ image.file.url }}" alt="{{ image.description }}">
-        
-        <h1 class="image-description">{{ image.description }} <br>upload by:<a href="{% url 'selected_user_images' image.user.username %}">{{ image.user.username }}</a> </h1>
-        
-    </div>
-    {% endfor %}
+  {% for image in object_list %}
+  <div class="image-container">
+    <a href="{% url 'image_selected_view' image.pk %}">
+      <img src="{{ image.file.url }}" alt="{{ image.description }}" />
+    </a>
+    <h1 class="image-description">
+      {{ image.description }} <br />upload by:<a
+        href="{% url 'selected_user_images' image.user.username %}"
+        >{{ image.user.username }}</a
+      >
+    </h1>
+  </div>
+  {% endfor %}
 </div>
 {% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'main/base.html' %} {% block content %}
+<div class="image-detail">
+  <img src="{{ image.file.url }}" alt="{{ image.description }}" />
+</div>
+<p>
+  {{ image.description }} <br />
+  Uploaded by:<a href="{% url 'selected_user_images' image.user.username %}"
+    >{{ image.user.username }}</a
+  >
+</p>
+
+{% endblock %}

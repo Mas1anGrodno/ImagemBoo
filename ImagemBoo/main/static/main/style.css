@@ -284,3 +284,16 @@ p {
   text-align: center; /* Центрирование текста */
 }
 
+/*  ---------------------- Image detail view---------------------  */
+.image-detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Высота контейнера равна высоте экрана */
+}
+
+.image-detail img {
+  max-width: 70%;
+  max-height: 70%; 
+  object-fit: contain;
+}
